@@ -1,0 +1,23 @@
+{
+    "name": "filipecristian/example-mocks-stub-spy",
+    "autoload": {
+        "psr-4": {
+            "Filipecristian\\ExampleMocksStubSpy\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "filipecristian",
+            "email": "filipe.oliveira@picpay.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "mockery/mockery": "^1.5"
+    }
+}
