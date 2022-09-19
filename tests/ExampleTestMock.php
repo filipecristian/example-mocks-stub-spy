@@ -3,6 +3,7 @@
 namespace Tests;
 
 use Filipecristian\ExampleMocksStubSpy\Model\UserModel;
+use Filipecristian\ExampleMocksStubSpy\Service\RedisService;
 use Filipecristian\ExampleMocksStubSpy\Service\UserService;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase as TestCase;
@@ -16,7 +17,7 @@ class ExampleTestMock extends TestCase
         $mock->shouldReceive('getNameByUid')
             ->once()
             ->with('1225acsshy2');
-        $userService = new UserService($mock);
+        $userService = new UserService($mock, new RedisService());
 
         // Act
         $userService->getUserNameUpperCase('1225acsshy2');
